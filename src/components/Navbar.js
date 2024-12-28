@@ -1,15 +1,37 @@
-import React from 'react'
-import Logo from "../assets/logo_motor.png";
+import React, { useState } from "react";
+import Logo from "../assets/pizza_logo.png";
+import { Link } from "react-router-dom";
+import ReorderIcon from "@mui/icons-material/Reorder";
+import "../styles/Navbar.css";
 
 function Navbar() {
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
   return (
     <div className="navbar">
-      <div className="leftSide">
-      <img src={Logo} />
+      <div className="leftSide" id={openLinks ? "open" : "close"}>
+        <img src={Logo} />
+        <div className="hiddenLinks">
+          <Link to="/">Home</Link>
+          <Link to="/model">Model</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">contact</Link>
+        </div>
       </div>
-      <div   className="rightSide"></div>
+      <div className="rightSide">
+        <Link to="/">Home</Link>
+        <Link to="/model">Model</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">contact</Link>
+        <button onClick={toggleNavbar}>
+          <ReorderIcon />
+        </button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
