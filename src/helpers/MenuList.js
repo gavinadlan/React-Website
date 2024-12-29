@@ -1,6 +1,6 @@
 import Pepperoni from "../assets/pepperoni.jpg";
 import Margherita from "../assets/margherita.jpg";
-import PedroTechSpecial from "../assets/pedrotechspecial.jpg";
+import VinSpecial from "../assets/VinSpecial.jpg";
 import Vegan from "../assets/vegan.jpg";
 import Pineapple from "../assets/pineapple.jpg";
 import Expensive from "../assets/expensive.jpg";
@@ -17,8 +17,8 @@ export const MenuList = [
     price: 11.99,
   },
   {
-    name: "PedroTech Special Pizza",
-    image: PedroTechSpecial,
+    name: "Vin Special Pizza",
+    image: VinSpecial,
     price: 256.53,
   },
   {
